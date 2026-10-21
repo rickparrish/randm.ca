@@ -1,0 +1,69 @@
+---
+layout: default
+permalink: /howto/synchronet/
+title: Synchronet on Linux and FreeBSD
+---
+<p>Once upon a time Synchronet was kind of a pain to get up and running on 64-bit Linux, and so after seeing some people try and fail I decided to give it a try.&nbsp; After getting it to work, I documented each step and provided clear instructions on this page for others to follow.</p>
+
+<p>For awhile now Synchronet has included libmozjs on the CVS server (which is the prerequisite that caused the most trouble), and so installation is now as simple for 64bit as it was for 32bit.&nbsp; So I've stripped down these instructions to the bare minimum (just the commands, no explanation of what they're doing) to act as a reference for when I need to install Synchronet on a new server for testing purposes.</p>
+
+<div class="alert alert-danger">NOTE: As you can see from the Ubuntu Server version, these instructions are many, many years old, and are likely not correct anymore.  This HOWTO has been removed from the navigation menu, so hopefully nobody will see it anymore, but if you do stumble across this page know that it may not be the help you're looking for.</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">Ubuntu Server 14.04</div>
+
+	<div class="panel-body">
+		<ul>
+			<li>sudo apt-get install build-essential cvs libncurses5-dev libnspr4-dev pkg-config python unzip zip</li>
+			<li>sudo mkdir /sbbs</li>
+			<li>cd /sbbs</li>
+			<li>sudo wget 'http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/GNUmakefile'</li>
+			<li>sudo make install SYMLINK=1 USE_DOSEMU=1 CVSTAG=sbbs316c</li>
+			<li>To configure:
+				<ul>
+					<li>#!/bin/bash</li>
+					<li>export SBBSCTRL=/sbbs/ctrl</li>
+					<li>/sbbs/exec/scfg</li>
+				</ul>
+			</li>
+			<li>To run:
+				<ul>
+					<li>#!/bin/bash</li>
+					<li>export SBBSCTRL=/sbbs/ctrl</li>
+					<li>/sbbs/exec/sbbs</li>
+				</ul>
+			</li>
+			<li>To run at boot:
+				<ul>
+					<li>cd /etc/init.d</li>
+					<li>sudo wget 'http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/init.d/sbbs.debian'</li>
+					<li>sudo mv sbbs.debian sbbs</li>
+					<li>sudo chmod ugo+x sbbs</li>
+					<li>sudo /etc/init.d/sbbs start</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">FreeBSD 9.1</div>
+
+	<div class="panel-body">
+		<ul>
+			<li>pkg_add -r nspr</li>
+			<li>pkg_add -r python</li>
+			<li>pkg_add -r unzip</li>
+			<li>pkg_add -r wget</li>
+			<li>pkg_add -r zip</li>
+			<li>mkdir /sbbs</li>
+			<li>cd /sbbs</li>
+			<li>wget 'http://cvs.synchro.net/cgi-bin/viewcvs.cgi/*checkout*/install/GNUmakefile'</li>
+			<li>gmake install SYMLINK=1 USE_DOSEMU=1 CVSTAG=sbbs316c</li>
+			<li>To configure: /sbbs/exec/scfg /sbbs/ctrl</li>
+			<li>To run: /sbbs/exec/sbbs /sbbs/ctrl</li>
+		</ul>
+	</div>
+</div>
+
+<p>&nbsp;</p>

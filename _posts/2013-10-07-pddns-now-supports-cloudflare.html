@@ -1,0 +1,8 @@
+---
+layout: default
+title: PDDNS now supports CloudFlare
+---
+
+<p>I've been using <a href="http://www.pointhq.com" target="_blank">Point</a> as my DNS provider for some time now, but somewhat recently they were bought out by <a href="http://www.copper.io" target="_blank">Copper.io</a>.&nbsp; I don't know anything about these guys, but I've been burned by being the client of a bought-out company before, so today I decided to proactively jump ship to another provider.&nbsp; I wanted to stay with a free provider, and so after asking around I've decided to go with <a href="http://www.cloudflare.com" target="_blank">CloudFlare</a>.</p>
+<p>Already I can see an improvement, with DNS lookups taking anywhere from 1/2 to 1/3 as long as they used to (50-75ms with CloudFlare vs 140-150ms with Point).&nbsp; Not that I expect that will really be noticeable, but hey faster is faster!</p>
+<p>Anyway, since I changed DNS providers I've had to go and update <a href="/assets//pddns/">PDDNS</a> to support the new provider.&nbsp; So if you've been looking for a decent dynamic dns updater to use with CloudFlare, give it a try!</p>

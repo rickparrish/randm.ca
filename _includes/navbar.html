@@ -1,0 +1,84 @@
+<div class="container">
+    <br />
+    <div class="navbar navbar-default" id="NavBar">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">{{ site.title }}</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li {% if page.url == "/news/" %}class="active"{% endif %}><a href="/news/">News</a></li>
+<li class="dropdown">
+<a href="/products" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li {% if page.url == "/products/ftelnet/" %}class="active"{% endif %}><a href="/products/ftelnet/">fTelnet</a></li>
+<li {% if page.url == "/products/gamesrv/" %}class="active"{% endif %}><a href="/products/gamesrv/">GameSrv</a></li>
+<li {% if page.url == "/products/phonetic-passwords/" %}class="active"{% endif %}><a href="/products/phonetic-passwords/">Phonetic Passwords</a></li>
+<li {% if page.url == "/products/plate-calculator/" %}class="active"{% endif %}><a href="/products/plate-calculator/">Plate Calculator</a></li>
+<li {% if page.url == "/products/rmgrep/" %}class="active"{% endif %}><a href="/products/rmgrep/">R&amp;M Grep</a></li>
+<li {% if page.url == "/products/pddns/" %}class="active"{% endif %}><a href="/products/pddns/">R&amp;M PDDNS</a></li>
+<li {% if page.url == "/products/rmlib/" %}class="active"{% endif %}><a href="/products/rmlib/">RMLib &amp; RMLibUI</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="/bbs" class="dropdown-toggle" data-toggle="dropdown">BBS Stuff<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li {% if page.url == "/bbs/dialup-to-telnet/" %}class="active"{% endif %}><a href="/bbs/dialup-to-telnet/">Dialup-To-Telnet</a></li>
+<li {% if page.url == "/bbs/gunshot/" %}class="active"{% endif %}><a href="/bbs/gunshot/">Gunshot BBS</a></li>
+<li {% if page.url == "/bbs/lord2/" %}class="active"{% endif %}><a href="/bbs/lord2/">LORD 2</a></li>
+<li {% if page.url == "/bbs/manndoor/" %}class="active"{% endif %}><a href="/bbs/manndoor/">MannDoor</a></li>
+<li {% if page.url == "/bbs/mannirc/" %}class="active"{% endif %}><a href="/bbs/mannirc/">MannIRC</a></li>
+<li {% if page.url == "/bbs/msyncfos/" %}class="active"{% endif %}><a href="/bbs/msyncfos/">mSyncFos</a></li>
+<li {% if page.url == "/bbs/renegade/" %}class="active"{% endif %}><a href="/bbs/renegade/">Renegade BBS</a></li>
+<li {% if page.url == "/bbs/rmastermind/" %}class="active"{% endif %}><a href="/bbs/rmastermind/">RMastermind</a></li>
+<li {% if page.url == "/bbs/telnetdoor/" %}class="active"{% endif %}><a href="/bbs/telnetdoor/">TelnetDoor</a></li>
+<li {% if page.url == "/bbs/usurper/" %}class="active"{% endif %}><a href="/bbs/usurper/">Usurper</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="/old" class="dropdown-toggle" data-toggle="dropdown">Old Stuff<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li {% if page.url == "/old/delphi/" %}class="active"{% endif %}><a href="/old/delphi/">Delphi Components</a></li>
+<li {% if page.url == "/old/hexcolour/" %}class="active"{% endif %}><a href="/old/hexcolour/">HexColour</a></li>
+<li {% if page.url == "/old/mannadt/" %}class="active"{% endif %}><a href="/old/mannadt/">MannADT</a></li>
+<li {% if page.url == "/old/manntrix/" %}class="active"{% endif %}><a href="/old/manntrix/">Manntrix</a></li>
+<li {% if page.url == "/old/getversionex/" %}class="active"{% endif %}><a href="/old/getversionex/">R&amp;M GetVersionEx()</a></li>
+</ul>
+</li>
+<li {% if page.url == "/contact/" %}class="active"{% endif %}><a href="/contact/">Contact</a></li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Other Themes <b class="caret"></b></a>
+                    <ul class="dropdown-menu" id="ThemesMenu">
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Default.min.css" data-themename="Default">Default</a></li>
+                        <li class="divider"></li>
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Cerulean.min.css" data-themename="Cerulean">Cerulean</a></li>
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Cosmo.min.css" data-themename="Cosmo">Cosmo</a></li>
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Cyborg.min.css" data-themename="Cyborg">Cyborg</a></li>
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Darkly.min.css" data-themename="Darkly">Darkly</a></li>
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Flatly.min.css" data-themename="Flatly">Flatly</a></li>
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Journal.min.css" data-themename="Journal">Journal</a></li>
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Lumen.min.css" data-themename="Lumen">Lumen</a></li>
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Paper.min.css" data-themename="Paper">Paper</a></li>
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Readable.min.css" data-themename="Readable">Readable</a></li>
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Sandstone.min.css" data-themename="Sandstone">Sandstone</a></li>
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Simplex.min.css" data-themename="Simplex">Simplex</a></li>
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Slate.min.css" data-themename="Slate">Slate</a></li>
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Spacelab.min.css" data-themename="Spacelab">Spacelab</a></li>
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Superhero.min.css" data-themename="Superhero">Superhero</a></li>
+                        <li class="current active"><a href="#" rel="/assets/css/bootstrap_United.min.css" data-themename="United">United</a></li>
+                        <li class=""><a href="#" rel="/assets/css/bootstrap_Yeti.min.css" data-themename="Yeti">Yeti</a></li>
+                        <li class="divider"></li>
+                        <li><a><input type="checkbox" id="chkInvertNavigationBar" /> <label for="chkInvertNavigationBar">Invert NavBar</label></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
